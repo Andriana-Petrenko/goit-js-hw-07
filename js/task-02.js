@@ -19,7 +19,7 @@ const images = [
   {
     url:
       'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    alt: 'Blue Geeen and Orange Parrot',
+    alt: 'Blue Green and Orange Parrot',
   },
   {
     url:
@@ -27,3 +27,11 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const list = document.querySelector('.gallery');
+const markup = images
+  .map((image) => `<li class="img"><img src="${image.url}" ${image.alt} width = "360" height = "300"/></li>`)
+  .join("");
+
+console.log(markup);
+list.innerHTML = markup;
