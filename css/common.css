@@ -48,7 +48,6 @@ li:last-child{
 
 li>ul>li{
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
   border: 1px solid #808080;
@@ -59,40 +58,46 @@ li>ul>li{
 /* ======Task-2====== */
 .gallery{
   display: flex;
-  flex-direction: column;
-  width: 1440px;
-  height: 848px;
-  padding: 100px 156px;
+  flex-direction: row;
+  max-width: 1128px;
+  padding: 100px 0;
   justify-content: center;
   align-items: flex-start;
-  row-gap: 48px;
-  column-gap: 24px;
+  gap: 48px 24px;
   flex-wrap: wrap;
   margin:0 auto;
 }
 
-.gallery>li{
+.img{
   width: calc((100% - 48px) / 3);
 }
 
 img {
-  max-width: 100%;
   display: block;
-  height:300px;
+  max-width: 360px;
+  height: 300px;
 }
 
 /* ======Task-3====== */
 
 #name-input{
+  display: block;
   width: 360px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #808080;
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 0px 8px 16px;
   margin: 0 auto;
+}
+
+#name-input::placeholder{
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 #name-input:focus{
@@ -122,11 +127,10 @@ h1{
 
 label{
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
-input {
+label>input {
   display: block;
   width: 360px;
   height: 40px;
@@ -135,31 +139,28 @@ input {
   margin-top: 8px;
   font-family: 'Montserrat';
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;  
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-input:hover,
-input:focus,
-input:active{
+label>input:hover,
+label>input:focus,
+label>input:active{
   outline: none;
   border: 1px solid #000;
 }
 
-button{
+form>button{
   width: 86px;
   height: 40px;
   border: none;
   border-radius: 8px;
   background-color: #4E75FF;
   cursor: pointer;
-  padding: 8px 16px;
   color: #FFF;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   margin-top: 8px;
 }
@@ -172,14 +173,13 @@ button:hover{
 
 .widget{
   width: 345px;
-  height: 280px;
   margin: 0 auto;
   padding: 100px 0;
 }
 
 .widget>p{
+  text-align: center;
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
@@ -189,12 +189,16 @@ button:hover{
   background-color: #4E75FF;
   width: 148px;
   height: 40px;
+  border: none;
   text-align: center;
   color: #FFF;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  font-family: Montserrat;
+  margin: 0 auto;
 }
 
 .change-color:hover{
@@ -222,10 +226,12 @@ button:hover{
   height: 40px;
   border-radius: 8px;
   border: 1px solid #808080;
-  margin-top: 0;
   outline: none;
   text-align: center;
-  
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 
 #controls>input:focus{
@@ -247,12 +253,17 @@ button:hover{
 }
 
 button[data-create]{
+  font-family: inherit;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   width: 120px;
   height: 40px;
   border-radius: 8px;
   background-color: #4E75FF;
-  margin-top: 0;
   cursor: pointer;
+  border: none;
 }
 
 button[data-create]:hover{
@@ -260,12 +271,17 @@ button[data-create]:hover{
 }
 
 button[data-destroy]{
+  font-family: inherit;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   width: 120px;
   height: 40px;
   border-radius: 8px;
   background-color: #FF4E4E;
-  margin-top: 0;
   cursor: pointer;
+  border: none;
 }
 
 button[data-destroy]:hover {
