@@ -4,34 +4,30 @@
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue' sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
-  color: #212121;
+  color: #2E2F42;
   line-height: 1.5;
+
 }
 
 /* ======Task-1====== */
 ul, li,h2{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 #categories{
   margin: 0 auto;
-  color: #2E2F42;
   padding: 24px;
   max-width: 440px;
   height: auto;
-  
 }
 
 h2{
-  color: #2E2F42;
-  font-family: Montserrat;
   font-weight: 600;
   line-height: 1.33; /* 133.333% */
   letter-spacing: 0.04em;
@@ -51,8 +47,6 @@ li:last-child{
 }
 
 li>ul>li{
-  color: #2E2F42;
-  font-family: Montserrat;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -94,21 +88,24 @@ img {
   height: 40px;
   border-radius: 4px;
   border: 1px solid #808080;
-  color: #2E2F42;
-  font-family: Montserrat;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 0px 8px 16px;
+  margin: 0 auto;
+}
+
+#name-input:focus{
+  outline: none;
+  border: 1px solid #000;
 }
 
 h1{
-color: #2E2F42;
-  font-family: Montserrat;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.04em;
+  text-align: center;
 }
 
 /* ======Task-4====== */
@@ -124,8 +121,6 @@ color: #2E2F42;
 }
 
 label{
-  color: #2E2F42;
-  font-family: Montserrat;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -138,23 +133,19 @@ input {
   border-radius: 4px;
   border: 1px solid #808080;
   margin-top: 8px;
-  color: #2E2F42;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+  letter-spacing: 0.04em;  
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-input:-webkit-autofill:active{
-  border: 1px solid #808080;
+input:hover,
+input:focus,
+input:active{
+  outline: none;
+  border: 1px solid #000;
 }
 
 button{
@@ -166,7 +157,6 @@ button{
   cursor: pointer;
   padding: 8px 16px;
   color: #FFF;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -177,18 +167,17 @@ button{
 button:hover{
   background-color: #6C8CFF;
 }
+
 /* ======Task-5====== */
 
 .widget{
-width: 345px;
-height: 280px;
-margin: 0 auto;
-padding: 100px 0;
+  width: 345px;
+  height: 280px;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 .widget>p{
-  color: #2E2F42;
-  font-family: Montserrat;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -202,13 +191,12 @@ padding: 100px 0;
   height: 40px;
   text-align: center;
   color: #FFF;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-
 }
+
 .change-color:hover{
   background-color: #6C8CFF;
 }
@@ -222,10 +210,11 @@ padding: 100px 0;
   gap:16px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
   border-radius: 8px;
   background-color: #F6F6FE;
   padding: 32px 0;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 #controls>input{
@@ -234,6 +223,13 @@ padding: 100px 0;
   border-radius: 8px;
   border: 1px solid #808080;
   margin-top: 0;
+  outline: none;
+  text-align: center;
+  
+}
+
+#controls>input:focus{
+  border: 1px solid #000;
 }
 
 #boxes{
@@ -247,8 +243,8 @@ padding: 100px 0;
   border-radius: 8px;
   background-color: #F6F6FE;
   padding: 32px 0;
+  margin: 0 auto;
 }
-
 
 button[data-create]{
   width: 120px;
@@ -256,6 +252,7 @@ button[data-create]{
   border-radius: 8px;
   background-color: #4E75FF;
   margin-top: 0;
+  cursor: pointer;
 }
 
 button[data-create]:hover{
@@ -268,6 +265,7 @@ button[data-destroy]{
   border-radius: 8px;
   background-color: #FF4E4E;
   margin-top: 0;
+  cursor: pointer;
 }
 
 button[data-destroy]:hover {

@@ -14,20 +14,16 @@ destroyBtn.addEventListener('click', destroyBoxes);
 
 function onButtonClick(event) {
   boxes.innerHTML = "";
+  if (input.value >= 1 && input.value <= 100)
   for (let i = 0; i < input.value; i++) {
-    if (input.value > 1 && input.value < 100);
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
     box.style.width = 30 + i * 10 + "px";
     box.style.height = 30 + i * 10 + "px";
-    boxes.appendChild(box);
-    
+    boxes.append(box);
   }
-  
   input.value = "";
-  
 }
-
 
 function destroyBoxes(event) {
   boxes.innerHTML="";
