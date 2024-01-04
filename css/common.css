@@ -68,7 +68,7 @@ li>ul>li{
   margin:0 auto;
 }
 
-.img{
+.gallery-item{
   width: calc((100% - 48px) / 3);
 }
 
