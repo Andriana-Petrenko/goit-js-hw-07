@@ -13,17 +13,18 @@ createBoxBtn.addEventListener('click', createBoxes);
 destroyBoxBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
-  if (Number(input.value) >= 1 && Number(input.value) <= 100) {
+  const inputNumber = Number(input.value);
+  if (inputNumber>= 1 && inputNumber<= 100) {
     boxes.innerHTML = '';
-  for (let i = 0; i < Number(input.value); i++) {
+  for (let i = 0; i < inputNumber; i++) {
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
     box.style.width = 30 + i * 10 + 'px';
     box.style.height = 30 + i * 10 + 'px';
     boxes.append(box);
+    }
+    input.value = '';
   }
-  }
-  input.value = '';
 }
 
 function destroyBoxes() {
